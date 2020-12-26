@@ -11,5 +11,8 @@ export {
   findIndex,
   every,
   some,
-} from './array/declare'
+} from './array/declares'
 export { unique1, unique2, unique3 } from './array/unique'
+export { concat } from './array/concat'
+export { slice } from './array/slice'
+export { flattenDeep } from './array/flattenDeep'

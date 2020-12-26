@@ -18,6 +18,7 @@
     "string",
     "function"
   ],
+  "repository": "https:/",
   "author": "ys <lokm_ys@163.com>",
   "license": "MIT"
 }

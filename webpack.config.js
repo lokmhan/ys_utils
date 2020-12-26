@@ -11,7 +11,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'ys_Utils.js',
     // filename: 'ys_Utils.min.js',
-    library: 'aUtils',
+    library: 'aUtils', // 向外暴露对象名称
     libraryTarget: 'umd', // 针对 esm / conmonjs
   },
 }
