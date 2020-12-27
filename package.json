@@ -1,5 +1,5 @@
 {
-  "name": "ys_Utils",
+  "name": "lokm_ys_utils",
   "version": "1.0.1",
   "description": "阳生的自定义工具函数库",
   "main": "webpack.config.js",
@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --watch"
   },
   "keywords": [
     "utils",

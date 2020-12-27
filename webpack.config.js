@@ -9,9 +9,9 @@ module.exports = {
   // 出口
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'ys_Utils.js',
+    filename: 'lokm_ys_utils.js',
     // filename: 'ys_Utils.min.js',
-    library: 'aUtils', // 向外暴露对象名称
+    library: 'ysUtils', // 向外暴露对象名称
     libraryTarget: 'umd', // 针对 esm / conmonjs
   },
 }
