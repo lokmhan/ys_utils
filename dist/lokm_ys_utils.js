@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"difference\": () => /* binding */ difference\n/* harmony export */ });\nfunction difference(array1, array2) {\r\n  const newArr = array1.slice(0)\r\n  array2.forEach((item) => {\r\n    newArr.forEach((value, index) => {\r\n      if (value === item) {\r\n        newArr.splice(index, 1)\r\n        return false\r\n      }\r\n    })\r\n  })\r\n  return newArr\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/difference.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"difference\": () => /* binding */ difference\n/* harmony export */ });\nfunction difference(array1, array2) {\r\n  const newArr = array1.slice(0)\r\n\r\n  array2.forEach((item) => {\r\n    for (let index = 0; index < newArr.length; index++) {\r\n      if (newArr[index] === item) {\r\n        newArr.splice(index, 1)\r\n        break\r\n      }\r\n    }\r\n  })\r\n  return newArr\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/difference.js?");
 
 /***/ }),
 
@@ -86,7 +86,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"intersection\": () => /* binding */ intersection\n/* harmony export */ });\nfunction intersection(array1, array2) {\r\n  const newArr = []\r\n  array1.forEach((item) => {\r\n    array2.forEach((value) => {\r\n      if (item === value) {\r\n        newArr.push(item)\r\n      }\r\n    })\r\n  })\r\n  return newArr\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/intersection.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"intersection\": () => /* binding */ intersection\n/* harmony export */ });\nfunction intersection(array1, array2) {\r\n  const newArr = []\r\n  array1.forEach((item) => {\r\n    for (let index = 0; index < array2.length; index++) {\r\n      if (item === array2[index]) {\r\n        newArr.push(item)\r\n        break\r\n      }\r\n    }\r\n  })\r\n  return newArr\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/intersection.js?");
 
 /***/ }),
 
@@ -96,7 +96,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"merge\": () => /* binding */ merge\n/* harmony export */ });\nfunction merge(array1, array2) {\r\n  const newArr = array1.slice(0)\r\n  array2.forEach((item) => {\r\n    let flag = true\r\n    newArr.forEach((value) => {\r\n      if (value === item) {\r\n        flag = false\r\n      }\r\n    })\r\n    if (flag) newArr.push(item)\r\n  })\r\n  return newArr\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/merge.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"merge\": () => /* binding */ merge\n/* harmony export */ });\nfunction merge(array1, array2) {\r\n  const newArr = array1.slice(0)\r\n  array2.forEach((item) => {\r\n    let flag = true\r\n    // newArr.forEach((value) => {\r\n    //   if (value === item) {\r\n    //     flag = false\r\n    //   }\r\n    // })\r\n    for (let index = 0; index < newArr.length; index++) {\r\n      if (newArr[index] === item) {\r\n        flag = false\r\n        break\r\n      }\r\n    }\r\n    if (flag) newArr.push(item)\r\n  })\r\n  return newArr\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/merge.js?");
 
 /***/ }),
 
