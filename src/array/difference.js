@@ -1,13 +1,17 @@
-export function difference(array1, array2) {
-  const newArr = array1.slice(0)
+export function difference(array1, ...arrays) {
+  if (array1.length === 0) {
+    return []
+  } else if (arrays.length === 0) {
+    return [...array1]
+  }
+  var newArr = [].concat(...arrays)
 
-  array2.forEach((item) => {
-    for (let index = 0; index < newArr.length; index++) {
-      if (newArr[index] === item) {
-        newArr.splice(index, 1)
-        break
-      }
+  return array1.filter((item) => {
+    var flag = true
+
+    if (newArr.indexOf(item) !== -1) {
+      flag = false
     }
+    return flag
   })
-  return newArr
 }

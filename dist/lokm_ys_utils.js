@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"difference\": () => /* binding */ difference\n/* harmony export */ });\nfunction difference(array1, array2) {\r\n  const newArr = array1.slice(0)\r\n\r\n  array2.forEach((item) => {\r\n    for (let index = 0; index < newArr.length; index++) {\r\n      if (newArr[index] === item) {\r\n        newArr.splice(index, 1)\r\n        break\r\n      }\r\n    }\r\n  })\r\n  return newArr\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/difference.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"difference\": () => /* binding */ difference\n/* harmony export */ });\nfunction difference(array1, ...arrays) {\r\n  if (array1.length === 0) {\r\n    return []\r\n  } else if (arrays.length === 0) {\r\n    return [...array1]\r\n  }\r\n  var newArr = [].concat(...arrays)\r\n\r\n  return array1.filter((item) => {\r\n    var flag = true\r\n\r\n    if (newArr.indexOf(item) !== -1) {\r\n      flag = false\r\n    }\r\n    return flag\r\n  })\r\n}\r\n\n\n//# sourceURL=webpack://ysUtils/./src/array/difference.js?");
 
 /***/ }),
 
