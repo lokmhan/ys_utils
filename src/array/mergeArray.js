@@ -1,12 +1,8 @@
-export function merge(array1, array2) {
+export function merge(array1, ...arrays) {
   const newArr = array1.slice(0)
-  array2.forEach((item) => {
+  const concatArray = [].concat(...arrays)
+  concatArray.forEach((item) => {
     let flag = true
-    // newArr.forEach((value) => {
-    //   if (value === item) {
-    //     flag = false
-    //   }
-    // })
     for (let index = 0; index < newArr.length; index++) {
       if (newArr[index] === item) {
         flag = false
