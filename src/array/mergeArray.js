@@ -1,4 +1,4 @@
-export function merge(array1, ...arrays) {
+export function mergeArray(array1, ...arrays) {
   const newArr = array1.slice(0)
   const concatArray = [].concat(...arrays)
   concatArray.forEach((item) => {
