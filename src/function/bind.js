@@ -1,6 +1,6 @@
 import { call } from './call'
 export function bind(func, obj, ...args) {
   return (...args2) => {
-    return func.call(obj, ...args, ...args2)
+    return call(func, obj, ...args, ...args2)
   }
 }

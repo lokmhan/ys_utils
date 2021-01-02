@@ -15,7 +15,6 @@ export function reduce(array, callback, initValue) {
   }
   return total
 }
-
 export function filter(array, callback) {
   const arr = []
   for (let index = 0; index < array.length; index++) {
@@ -25,9 +24,9 @@ export function filter(array, callback) {
       arr.push(value)
     }
   }
+
   return arr
 }
-
 export function find(array, callback) {
   for (let index = 0; index < array.length; index++) {
     const value = array[index]
@@ -35,9 +34,11 @@ export function find(array, callback) {
     if (result) {
       return value
     }
+    console.log(1)
   }
   return undefined
 }
+
 export function findIndex(array, callback) {
   for (let index = 0; index < array.length; index++) {
     const value = array[index]
@@ -45,6 +46,7 @@ export function findIndex(array, callback) {
     if (result) {
       return index
     }
+    console.log(1)
   }
   return -1
 }
@@ -56,6 +58,7 @@ export function every(array, callback) {
       return false
     }
   }
+  return true
 }
 export function some(array, callback) {
   for (let index = 0; index < array.length; index++) {
@@ -65,4 +68,5 @@ export function some(array, callback) {
       return true
     }
   }
+  return false
 }
